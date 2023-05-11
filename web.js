@@ -7,4 +7,9 @@ router.get('/',function(req,res){
     //__dirname : It will resolve to your project folder.
 });
 
+router.get('/js/index.js',function(req,res){
+    res.sendFile(path.join(__dirname+'/www/js/index.js'));
+    //__dirname : It will resolve to your project folder.
+});
+
 module.exports = router;
