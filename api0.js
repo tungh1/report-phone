@@ -95,6 +95,7 @@ router.get('/otp/report', async (req, res) => {
   const filter_apple = {timestamp: timestamp.getTime(), branch_type: 'Apple'};
   const filter_kucoin = {timestamp: timestamp.getTime(), branch_type: 'KuCoin'};
   const filter_huawei = {timestamp: timestamp.getTime(), branch_type: 'Huawei'};
+  const filter_garmin = {timestamp: timestamp.getTime(), branch_type: 'Garmin'};
 
   //const data = await OtpModel.aggregate().sortByCount("branch_type");
   const lstOtp = await OtpModel.count(filter);
@@ -109,6 +110,7 @@ router.get('/otp/report', async (req, res) => {
   const count_apple = await OtpModel.count(filter_apple);
   const count_kucoin = await OtpModel.count(filter_kucoin);
   const count_huawei = await OtpModel.count(filter_huawei);
+  const count_garmin = await OtpModel.count(filter_garmin);
   
   var result = "<p id='farm0' total='" + lstOtp + "'><b>Farm 0</b> (" + current_date + "-" + timestamp.getTime() + ") </br><b>Team Sơn - Hiếu: " + lstOtp + "</b></br>";
   result += "<b style='color:blue'>LinkedIn: <span id='linkedin_0'>" + count_linkedin_tha + "</span></b></br>";
@@ -120,6 +122,7 @@ router.get('/otp/report', async (req, res) => {
   result += "Discord: " + count_discord_tha + "</br>";
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";
+  result += "Garmin: " + count_garmin + "</br>";
   result += "Kucoin: <span id='kucoin_0'>" + count_kucoin + "</span></br>";
   result += "Huawei: " + count_huawei + "</p>";
 
