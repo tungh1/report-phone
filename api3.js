@@ -121,7 +121,7 @@ router.get('/otp/report', async (req, res) => {
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";
   result += "Garmin: " + count_garmin + "</br>";
-  result += "Viber: <span id='viber_0'>" + count_viber + "</span></br>";
+  result += "Viber: <span id='viber_3'>" + count_viber + "</span></br>";
   result += "Kucoin: <span id='kucoin_3'>" + count_kucoin + "</span></p>";
 
   res.send(result);
