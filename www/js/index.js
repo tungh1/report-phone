@@ -146,6 +146,12 @@ var intTotal5 = 0;
             var total_google_farm_4 = document.getElementById("google_4");
             total_google_son.innerHTML = parseInt(total_google_farm_0.innerText) + parseInt(total_google_farm_2.innerText) + parseInt(total_google_farm_4.innerText)
 
+            var total_viber_son = document.getElementById("viber_son");
+            var total_viber_farm_0 = document.getElementById("viber_0");
+            var total_viber_farm_2 = document.getElementById("viber_2");
+            var total_viber_farm_4 = document.getElementById("viber_4");
+            total_viber_son.innerHTML = parseInt(total_viber_farm_0.innerText) + parseInt(total_viber_farm_2.innerText) + parseInt(total_viber_farm_4.innerText)
+
 
             var total_facebook_son = document.getElementById("facebook_son");
             var total_facebook_farm_0 = document.getElementById("facebook_0");
@@ -179,6 +185,11 @@ var intTotal5 = 0;
             var total_google_farm_5 = document.getElementById("google_5");
             total_google_thang.innerHTML = parseInt(total_google_farm_1.innerText) + parseInt(total_google_farm_3.innerText) + parseInt(total_google_farm_5.innerText)
 
+            var total_viber_thang = document.getElementById("viber_thang");
+            var total_viber_farm_1 = document.getElementById("viber_1");
+            var total_viber_farm_3 = document.getElementById("viber_3");
+            var total_viber_farm_5 = document.getElementById("viber_5");
+            total_viber_thang.innerHTML = parseInt(total_viber_farm_1.innerText) + parseInt(total_viber_farm_3.innerText) + parseInt(total_viber_farm_5.innerText)
 
             var total_facebook_thang = document.getElementById("facebook_thang");
             var total_facebook_farm_1 = document.getElementById("facebook_1");
