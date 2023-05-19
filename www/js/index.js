@@ -144,7 +144,6 @@ var intTotal5 = 0;
             var total_google_farm_0 = document.getElementById("google_0");
             var total_google_farm_2 = document.getElementById("google_2");
             var total_google_farm_4 = document.getElementById("google_4");
-            total_google_son.innerHTML = parseInt(total_google_farm_0.innerText) + parseInt(total_google_farm_2.innerText) + parseInt(total_google_farm_4.innerText)
 
             var total_viber_son = document.getElementById("viber_son");
             var total_viber_farm_0 = document.getElementById("viber_0");
@@ -183,7 +182,7 @@ var intTotal5 = 0;
             var total_google_farm_1 = document.getElementById("google_1");
             var total_google_farm_3 = document.getElementById("google_3");
             var total_google_farm_5 = document.getElementById("google_5");
-            total_google_thang.innerHTML = parseInt(total_google_farm_1.innerText) + parseInt(total_google_farm_3.innerText) + parseInt(total_google_farm_5.innerText)
+            total_google_thang.innerHTML = parseInt(total_google_farm_1.innerText) + parseInt(total_google_farm_3.innerText) - parseInt(total_google_farm_5.innerText)
 
             var total_viber_thang = document.getElementById("viber_thang");
             var total_viber_farm_1 = document.getElementById("viber_1");
@@ -197,6 +196,7 @@ var intTotal5 = 0;
             var total_facebook_farm_5 = document.getElementById("facebook_5");
             var total_facebook_farm_2 = document.getElementById("facebook_2");
             //total_facebook_thang.innerHTML = parseInt(total_facebook_farm_1.innerText) + parseInt(total_facebook_farm_2.innerText) + parseInt(total_facebook_farm_3.innerText) + parseInt(total_facebook_farm_5.innerText)
+            total_google_son.innerHTML = parseInt(total_google_farm_0.innerText) + parseInt(total_google_farm_2.innerText) + parseInt(total_google_farm_4.innerText) + parseInt(total_google_farm_5.innerText)
 
             var stotal_otp = document.getElementById("total_otp");
             stotal_otp.innerHTML = totalOtp;
