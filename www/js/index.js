@@ -182,7 +182,7 @@ var intTotal5 = 0;
             var total_google_farm_1 = document.getElementById("google_1");
             var total_google_farm_3 = document.getElementById("google_3");
             var total_google_farm_5 = document.getElementById("google_5");
-            total_google_thang.innerHTML = parseInt(total_google_farm_1.innerText) + parseInt(total_google_farm_3.innerText) - parseInt(total_google_farm_5.innerText)
+            total_google_thang.innerHTML = parseInt(total_google_farm_1.innerText) + parseInt(total_google_farm_3.innerText);
 
             var total_viber_thang = document.getElementById("viber_thang");
             var total_viber_farm_1 = document.getElementById("viber_1");
