@@ -201,10 +201,10 @@ var intTotal5 = 0;
             var stotal_otp = document.getElementById("total_otp");
             stotal_otp.innerHTML = totalOtp;
             const total_thang = document.getElementById("total_thang");
-            total_thang.innerHTML = intTotal0 + intTotal3 + intTotal5 + parseInt(total_facebook_farm_2.innerText);
+            total_thang.innerHTML = intTotal0 + intTotal3 + intTotal5 + parseInt(total_facebook_farm_2.innerText) - parseInt(total_google_farm_5.innerText);
 
             const total_son_hieu = document.getElementById("total_son_hieu");
-            total_son_hieu.innerHTML = intTotal0_10000 + intTotal2 + intTotal4 - parseInt(total_facebook_farm_2.innerText);  
+            total_son_hieu.innerHTML = intTotal0_10000 + intTotal2 + intTotal4 - parseInt(total_facebook_farm_2.innerText) + parseInt(total_google_farm_5.innerText);  
 
             setTimeout(intervalFunc, 5000);
             console.log(totalOtp);
