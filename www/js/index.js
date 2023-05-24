@@ -123,88 +123,65 @@ var intTotal5 = 0;
 
             //Son
             var total_apple_son = document.getElementById("apple_son");
-            var total_apple_farm_0 = document.getElementById("apple_0");
-            var total_apple_farm_2 = document.getElementById("apple_2");
-            var total_apple_farm_4 = document.getElementById("apple_4");
-            total_apple_son.innerHTML = parseInt(total_apple_farm_0.innerText) + parseInt(total_apple_farm_2.innerText) + parseInt(total_apple_farm_4.innerText);
+            //var total_apple_farm_0 = document.getElementById("apple_0");
+            var total_apple_farm_3 = document.getElementById("apple_3");
+            //var total_apple_farm_4 = document.getElementById("apple_4");
+            total_apple_son.innerHTML = parseInt(total_apple_farm_3.innerText);
 
             var total_kucoin_son = document.getElementById("kucoin_son");
-            var total_kucoin_farm_0 = document.getElementById("kucoin_0");
-            var total_kucoin_farm_2 = document.getElementById("kucoin_2");
-            var total_kucoin_farm_4 = document.getElementById("kucoin_4");
-            total_kucoin_son.innerHTML = parseInt(total_kucoin_farm_0.innerText) + parseInt(total_kucoin_farm_2.innerText) + parseInt(total_kucoin_farm_4.innerText);
+            var total_kucoin_farm_3 = document.getElementById("kucoin_3");
+            total_kucoin_son.innerHTML = parseInt(total_kucoin_farm_3.innerText);
 
             var total_linkedin_son = document.getElementById("linkedin_son");
-            var total_linkedin_farm_0 = document.getElementById("linkedin_0");
-            var total_linkedin_farm_2 = document.getElementById("linkedin_2");
-            var total_linkedin_farm_4 = document.getElementById("linkedin_4");
-            total_linkedin_son.innerHTML = parseInt(total_linkedin_farm_0.innerText) + parseInt(total_linkedin_farm_2.innerText) + parseInt(total_linkedin_farm_4.innerText)
+            var total_linkedin_farm_3 = document.getElementById("linkedin_3");
+            total_linkedin_son.innerHTML = parseInt(total_linkedin_farm_3.innerText);
 
             var total_google_son = document.getElementById("google_son");
-            var total_google_farm_0 = document.getElementById("google_0");
-            var total_google_farm_2 = document.getElementById("google_2");
-            var total_google_farm_4 = document.getElementById("google_4");
+            var total_google_farm_3 = document.getElementById("google_3");
 
             var total_viber_son = document.getElementById("viber_son");
-            var total_viber_farm_0 = document.getElementById("viber_0");
-            var total_viber_farm_2 = document.getElementById("viber_2");
-            var total_viber_farm_4 = document.getElementById("viber_4");
-            total_viber_son.innerHTML = parseInt(total_viber_farm_0.innerText) + parseInt(total_viber_farm_2.innerText) + parseInt(total_viber_farm_4.innerText)
+            var total_viber_farm_3 = document.getElementById("viber_3");
+            total_viber_son.innerHTML = parseInt(total_viber_farm_3.innerText);
 
 
             //var total_facebook_son = document.getElementById("facebook_son");
-            var total_facebook_farm_0 = document.getElementById("facebook_0");
-            
-            var total_facebook_farm_4 = document.getElementById("facebook_4");
             //total_facebook_son.innerHTML = parseInt(total_facebook_farm_0.innerText) + parseInt(total_facebook_farm_4.innerText)
 
 
             //Thang
             var total_apple_thang = document.getElementById("apple_thang");
-            var total_apple_farm_1 = document.getElementById("apple_1");
-            var total_apple_farm_3 = document.getElementById("apple_3");
-            var total_apple_farm_5 = document.getElementById("apple_5");
-            total_apple_thang.innerHTML = parseInt(total_apple_farm_1.innerText) + parseInt(total_apple_farm_3.innerText) + parseInt(total_apple_farm_5.innerText);
+            var total_apple_farm_2 = document.getElementById("apple_2");
+            total_apple_thang.innerHTML = parseInt(total_apple_farm_2.innerText);
 
             var total_kucoin_thang = document.getElementById("kucoin_thang");
-            var total_kucoin_farm_1 = document.getElementById("kucoin_1");
-            var total_kucoin_farm_3 = document.getElementById("kucoin_3");
-            var total_kucoin_farm_5 = document.getElementById("kucoin_5");
-            total_kucoin_thang.innerHTML = parseInt(total_kucoin_farm_1.innerText) + parseInt(total_kucoin_farm_3.innerText) + parseInt(total_kucoin_farm_5.innerText);
+            var total_kucoin_farm_2 = document.getElementById("kucoin_2");
+            total_kucoin_thang.innerHTML = parseInt(total_kucoin_farm_2.innerText);
 
             var total_linkedin_thang = document.getElementById("linkedin_thang");
-            var total_linkedin_farm_1 = document.getElementById("linkedin_1");
-            var total_linkedin_farm_3 = document.getElementById("linkedin_3");
-            var total_linkedin_farm_5 = document.getElementById("linkedin_5");
-            total_linkedin_thang.innerHTML = parseInt(total_linkedin_farm_1.innerText) + parseInt(total_linkedin_farm_3.innerText) + parseInt(total_linkedin_farm_5.innerText)
+            var total_linkedin_farm_2 = document.getElementById("linkedin_2");
+            total_linkedin_thang.innerHTML = parseInt(total_linkedin_farm_2.innerText);
 
             var total_google_thang = document.getElementById("google_thang");
-            var total_google_farm_1 = document.getElementById("google_1");
-            var total_google_farm_3 = document.getElementById("google_3");
-            var total_google_farm_5 = document.getElementById("google_5");
-            total_google_thang.innerHTML = parseInt(total_google_farm_1.innerText) + parseInt(total_google_farm_3.innerText);
+            var total_google_farm_2 = document.getElementById("google_2");
+            total_google_thang.innerHTML = parseInt(total_google_farm_2.innerText);
 
             var total_viber_thang = document.getElementById("viber_thang");
-            var total_viber_farm_1 = document.getElementById("viber_1");
-            var total_viber_farm_3 = document.getElementById("viber_3");
-            var total_viber_farm_5 = document.getElementById("viber_5");
-            total_viber_thang.innerHTML = parseInt(total_viber_farm_1.innerText) + parseInt(total_viber_farm_3.innerText) + parseInt(total_viber_farm_5.innerText)
+            var total_viber_farm_2 = document.getElementById("viber_2");
+            total_viber_thang.innerHTML = parseInt(total_viber_farm_2.innerText);
 
             //var total_facebook_thang = document.getElementById("facebook_thang");
-            var total_facebook_farm_1 = document.getElementById("facebook_1");
             var total_facebook_farm_3 = document.getElementById("facebook_3");
-            var total_facebook_farm_5 = document.getElementById("facebook_5");
             var total_facebook_farm_2 = document.getElementById("facebook_2");
             //total_facebook_thang.innerHTML = parseInt(total_facebook_farm_1.innerText) + parseInt(total_facebook_farm_2.innerText) + parseInt(total_facebook_farm_3.innerText) + parseInt(total_facebook_farm_5.innerText)
-            total_google_son.innerHTML = parseInt(total_google_farm_0.innerText) + parseInt(total_google_farm_2.innerText) + parseInt(total_google_farm_4.innerText) + parseInt(total_google_farm_5.innerText)
+            total_google_son.innerHTML = parseInt(total_google_farm_3.innerText)
 
             var stotal_otp = document.getElementById("total_otp");
             stotal_otp.innerHTML = totalOtp;
             const total_thang = document.getElementById("total_thang");
-            total_thang.innerHTML = intTotal0 + intTotal3 + intTotal5 + parseInt(total_facebook_farm_2.innerText) - parseInt(total_google_farm_5.innerText);
+            total_thang.innerHTML =  intTotal3; //+ parseInt(total_facebook_farm_2.innerText);
 
             const total_son_hieu = document.getElementById("total_son_hieu");
-            total_son_hieu.innerHTML = intTotal0_10000 + intTotal2 + intTotal4 - parseInt(total_facebook_farm_2.innerText) + parseInt(total_google_farm_5.innerText);  
+            total_son_hieu.innerHTML = intTotal3; // + intTotal4 - parseInt(total_facebook_farm_2.innerText) + parseInt(total_google_farm_5.innerText);  
 
             setTimeout(intervalFunc, 5000);
             console.log(totalOtp);
