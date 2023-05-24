@@ -60,7 +60,7 @@ var intTotal5 = 0;
           intTotal2 = parseInt(totalFarm2);
           var stotal_otp = document.getElementById("total_otp");
           stotal_otp.innerHTML = totalOtp;  
-          loadFarm4()
+          loadFarm3()
           console.log(totalOtp);
       })
       .catch(function (err) {
@@ -215,7 +215,7 @@ var intTotal5 = 0;
   }
 
   function intervalFunc() {
-    loadFarm0();
+    loadFarm2();
   }
 
   function appendData(data, strDiv) {

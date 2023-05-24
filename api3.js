@@ -4,6 +4,12 @@ var router = express.Router();
 var request=require('request-promise');
 
 router.get('/otp/report', async (req, res) => {
+
+  const identity = req.query.farm;
+  if (!identity || identity != 'g2') { 
+    res.send("");
+  };
+
   var current_date = new Date().toLocaleDateString();
   var timestamp = new Date(current_date);
   const filter = {timestamp: timestamp.getTime()};
@@ -36,7 +42,7 @@ router.get('/otp/report', async (req, res) => {
   
   var result = "<p><b id='farm3' total='" + lstOtp + "'>Farm 3: " + lstOtp + "</b></br>";
 
-  result += "<b>Team Thắng</b></br>";
+  result += "<b>Team Sơn</b></br>";
   result += "<b style='color:blue'>LinkedIn: <span id='linkedin_3'>" + count_linkedin_tha + "</span></b></br>";
   result += "<b style='color:blue'>Apple: <span id='apple_3'>" + count_apple + "</span></b></br>";
   result += "<b style='color:green'>Google: <span id='google_3'>" + count_google_tha + "</span></b></br>";

@@ -8,7 +8,7 @@ router.get('/js',function(req,res){
 });
 
 router.get('/',function(req,res){
-    const identity = req.params.farm;
+    const identity = req.query.farm;
     if (identity && identity == 'g2') {
         res.sendFile(path.join(__dirname+'/www/index.html'));
         //__dirname : It will resolve to your project folder.

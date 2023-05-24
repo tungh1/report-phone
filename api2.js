@@ -4,6 +4,11 @@ var router = express.Router();
 var request=require('request-promise');
 
 router.get('/otp/report', async (req, res) => {
+  const identity = req.query.farm;
+  if (!identity || identity != 'g2') { 
+    res.send("");
+  };
+
   var current_date = new Date().toLocaleDateString();
   var timestamp = new Date(current_date);
   const filter = {timestamp: timestamp.getTime()};
@@ -41,7 +46,7 @@ router.get('/otp/report', async (req, res) => {
   const count_viber = await OtpModel.count(filter_viber);
 
   
-  var result = "<p id='farm2' total='" + lstOtp + "'><b>Farm 2: "+ lstOtp +"</b></br><b>Team Sơn - Hiếu</b></br>";
+  var result = "<p id='farm2' total='" + lstOtp + "'><b>Farm 2: "+ lstOtp +"</b>(" + current_date + "-" + timestamp.getTime() + ")</br><b>Team Thắng</b></br>";
   result += "<b style='color:blue'>LinkedIn: <span id='linkedin_2'>" + count_linkedin_tha + "</span></b></br>";
   result += "<b style='color:blue'>Apple: <span id='apple_2'>" + count_apple + "</span></b></br>";
   result += "<b style='color:green'>Google: <span id='google_2'>" + count_google_tha + "</span></b></br>";
