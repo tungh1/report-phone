@@ -135,7 +135,8 @@ var intTotal5 = 0;
 
             var total_linkedin_son = document.getElementById("linkedin_son");
             var total_linkedin_farm_3 = document.getElementById("linkedin_3");
-            total_linkedin_son.innerHTML = parseInt(total_linkedin_farm_3.innerText);
+            var total_linkedin_farm_5 = document.getElementById("linkedin_5");
+            total_linkedin_son.innerHTML = parseInt(total_linkedin_farm_3.innerText) + parseInt(total_linkedin_farm_5.innerText);
 
             var total_google_son = document.getElementById("google_son");
             var total_google_farm_3 = document.getElementById("google_3");
@@ -162,7 +163,8 @@ var intTotal5 = 0;
 
             var total_linkedin_thang = document.getElementById("linkedin_thang");
             var total_linkedin_farm_2 = document.getElementById("linkedin_2");
-            total_linkedin_thang.innerHTML = parseInt(total_linkedin_farm_2.innerText);
+            var total_linkedin_farm_4 = document.getElementById("linkedin_4");
+            total_linkedin_thang.innerHTML = parseInt(total_linkedin_farm_2.innerText) + parseInt(total_linkedin_farm_4.innerText);
 
             var total_google_thang = document.getElementById("google_thang");
             var total_google_farm_2 = document.getElementById("google_2");
