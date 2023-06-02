@@ -19,6 +19,7 @@ router.get('/otp/report', async (req, res) => {
   const filter_kucoin = {timestamp: timestamp.getTime(), branch_type: 'KuCoin'};
   const filter_garmin = {timestamp: timestamp.getTime(), branch_type: 'Garmin'};
   const filter_viber = {timestamp: timestamp.getTime(), branch_type: 'Viber'};
+  const filter_sociolla = {timestamp: timestamp.getTime(), branch_type: 'Sociolla'};
 
   const lstOtp = await OtpModel.count(filter);
   const count_linkedin_tha = await OtpModel.count(filter_linkedin);
@@ -33,22 +34,24 @@ router.get('/otp/report', async (req, res) => {
   const count_kucoin = await OtpModel.count(filter_kucoin);
   const count_garmin = await OtpModel.count(filter_garmin);
   const count_viber = await OtpModel.count(filter_viber);
+  const count_sociolla = await OtpModel.count(filter_sociolla);
   
   var result = "<b id='farm5' total='" + lstOtp + "'>Farm 5: " + lstOtp + "</b></br>";
 
-  result += "<b>Team Thắng: </b></br>";
-  result += "<b style='color:blue'>LinkedIn: <span id='linkedin_5'>" + count_linkedin_tha + "</span></b></br>";
-  result += "<b style='color:blue'>Apple: <span id='apple_5'>" + count_apple + "</span></b></br>";
-  result += "<b style='color:green;'>Google: <span id='google_5'>" + count_google_tha + "</span></b></br>";
-  result += "<b style='color:green'>Facebook: <span id='facebook_5'>" + count_facebook_tha + "</span></b></br>";
+  result += "<b>W-507</b></br>";
+  result += "<b style='color:blue'>LinkedIn: <span id='linkedin_3'>" + count_linkedin_tha + "</span></b></br>";
+  result += "<b style='color:blue'>Apple: <span id='apple_3'>" + count_apple + "</span></b></br>";
+  result += "<b style='color:green'>Google: <span id='google_3'>" + count_google_tha + "</span></b></br>";
+  result += "<b style='color:green'>Facebook: <span id='facebook_3'>" + count_facebook_tha + "</span></b></br>";
   result += "Line: " + count_line_tha + "</br>";
   result += "Bigo: " + count_bigo_tha + "</br>";
   result += "Discord: " + count_discord_tha + "</br>";
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";
   result += "Garmin: " + count_garmin + "</br>";
-  result += "Viber: <span id='viber_5'>" + count_viber + "</span></br>";
-  result += "Kucoin: <span id='kucoin_5'>" + count_kucoin + "</span></br>";
+  result += "Sociolla: " + count_sociolla + "</br>";
+  result += "Viber: <span id='viber_3'>" + count_viber + "</span></br>";
+  result += "Kucoin: <span id='kucoin_3'>" + count_kucoin + "</span></p>";
 
   res.send(result);
   
