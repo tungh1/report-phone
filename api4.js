@@ -38,7 +38,6 @@ router.get('/otp/report', async (req, res) => {
   
   var result = "<b id='farm4' total='" + lstOtp + "'>Farm 4: " + lstOtp + "</b></br>";
 
-  result += "<b>I-408</b></br>";
   result += "<b style='color:blue'>LinkedIn: <span id='linkedin_4'>" + count_linkedin_tha + "</span></b></br>";
   result += "<b style='color:blue'>Apple: <span id='apple_4'>" + count_apple + "</span></b></br>";
   result += "<b style='color:green'>Google: <span id='google_4'>" + count_google_tha + "</span></b></br>";
