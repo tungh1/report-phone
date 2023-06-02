@@ -39,10 +39,10 @@ router.get('/otp/report', async (req, res) => {
   var result = "<b id='farm5' total='" + lstOtp + "'>Farm 5: " + lstOtp + "</b></br>";
 
   result += "<b>W-507</b></br>";
-  result += "<b style='color:blue'>LinkedIn: <span id='linkedin_3'>" + count_linkedin_tha + "</span></b></br>";
-  result += "<b style='color:blue'>Apple: <span id='apple_3'>" + count_apple + "</span></b></br>";
-  result += "<b style='color:green'>Google: <span id='google_3'>" + count_google_tha + "</span></b></br>";
-  result += "<b style='color:green'>Facebook: <span id='facebook_3'>" + count_facebook_tha + "</span></b></br>";
+  result += "<b style='color:blue'>LinkedIn: <span id='linkedin_5'>" + count_linkedin_tha + "</span></b></br>";
+  result += "<b style='color:blue'>Apple: <span id='apple_5'>" + count_apple + "</span></b></br>";
+  result += "<b style='color:green'>Google: <span id='google_5'>" + count_google_tha + "</span></b></br>";
+  result += "<b style='color:green'>Facebook: <span id='facebook_5'>" + count_facebook_tha + "</span></b></br>";
   result += "Line: " + count_line_tha + "</br>";
   result += "Bigo: " + count_bigo_tha + "</br>";
   result += "Discord: " + count_discord_tha + "</br>";
@@ -50,8 +50,8 @@ router.get('/otp/report', async (req, res) => {
   result += "Agoda: " + count_agoda + "</br>";
   result += "Garmin: " + count_garmin + "</br>";
   result += "Sociolla: " + count_sociolla + "</br>";
-  result += "Viber: <span id='viber_3'>" + count_viber + "</span></br>";
-  result += "Kucoin: <span id='kucoin_3'>" + count_kucoin + "</span></p>";
+  result += "Viber: <span id='viber_5'>" + count_viber + "</span></br>";
+  result += "Kucoin: <span id='kucoin_5'>" + count_kucoin + "</span></p>";
 
   res.send(result);
   
