@@ -43,9 +43,7 @@ router.get('/otp/report', async (req, res) => {
   const count_viber = await OtpModel.count(filter_viber);
   const count_sociolla = await OtpModel.count(filter_sociolla);
   
-  var result = "<p><b id='farm3' total='" + lstOtp + "'>Farm 3: " + lstOtp + "</b></br>";
-
-  result += "<b>Z305</b></br>";
+  var result = "<p><b>Z305</b></br><b id='farm3' total='" + lstOtp + "'>Farm 3: " + lstOtp + "</b></br>";
   result += "<b style='color:blue'>LinkedIn: <span id='linkedin_3'>" + count_linkedin_tha + "</span></b></br>";
   result += "<b style='color:blue'>Apple: <span id='apple_3'>" + count_apple + "</span></b></br>";
   result += "<b style='color:green'>Google: <span id='google_3'>" + count_google_tha + "</span></b></br>";
