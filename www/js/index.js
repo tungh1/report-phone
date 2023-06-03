@@ -168,7 +168,8 @@ var intTotal5 = 0;
 
             var total_google_thang = document.getElementById("google_thang");
             var total_google_farm_2 = document.getElementById("google_2");
-            total_google_thang.innerHTML = parseInt(total_google_farm_2.innerText);
+            var total_google_farm_4 = document.getElementById("google_4");
+            total_google_thang.innerHTML = parseInt(total_google_farm_2.innerText) + parseInt(total_google_farm_4.innerText);
 
             var total_viber_thang = document.getElementById("viber_thang");
             var total_viber_farm_2 = document.getElementById("viber_2");
@@ -178,7 +179,7 @@ var intTotal5 = 0;
             var total_facebook_farm_3 = document.getElementById("facebook_3");
             var total_facebook_farm_2 = document.getElementById("facebook_2");
             //total_facebook_thang.innerHTML = parseInt(total_facebook_farm_1.innerText) + parseInt(total_facebook_farm_2.innerText) + parseInt(total_facebook_farm_3.innerText) + parseInt(total_facebook_farm_5.innerText)
-            total_google_son.innerHTML = parseInt(total_google_farm_3.innerText)
+            total_google_son.innerHTML = parseInt(total_google_farm_3.innerText) + parseInt(total_google_farm_5.innerText);
 
             var stotal_otp = document.getElementById("total_otp");
             stotal_otp.innerHTML = totalOtp;
