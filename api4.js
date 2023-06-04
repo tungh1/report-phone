@@ -21,6 +21,7 @@ router.get('/otp/report', async (req, res) => {
   const filter_garmin = {timestamp: timestamp.getTime(), branch_type: 'Garmin'};
   const filter_viber = {timestamp: timestamp.getTime(), branch_type: 'Viber'};
   const filter_lazada = {timestamp: timestamp.getTime(), branch_type: 'Lazada'};
+  const filter_sociolla = {timestamp: timestamp.getTime(), branch_type: 'Sociolla'};
 
   const lstOtp = await OtpModel.count(filter);
   const count_linkedin_tha = await OtpModel.count(filter_linkedin);
@@ -37,6 +38,7 @@ router.get('/otp/report', async (req, res) => {
   const count_garmin = await OtpModel.count(filter_garmin);
   const count_viber = await OtpModel.count(filter_viber);
   const count_lazada = await OtpModel.count(filter_lazada);
+  const count_sociolla = await OtpModel.count(filter_sociolla);
   
   var result = "<b id='farm4' total='" + lstOtp + "'>Farm 4: " + lstOtp + "</b></br>";
 
@@ -48,6 +50,7 @@ router.get('/otp/report', async (req, res) => {
   result += "Bigo: " + count_bigo_tha + "</br>";
   result += "Discord: " + count_discord_tha + "</br>";
   result += "Lazada: " + count_lazada + "</br>";
+  result += "Sociolla: " + count_sociolla + "</br>";
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";
   result += "Garmin: " + count_garmin + "</br>";
