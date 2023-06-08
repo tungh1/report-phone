@@ -27,6 +27,14 @@ router.get('/otp/report', async (req, res) => {
   const filter_viber = {timestamp: timestamp.getTime(), branch_type: 'Viber'};
   const filter_lazada = {timestamp: timestamp.getTime(), branch_type: 'Lazada'};
   const filter_sociolla = {timestamp: timestamp.getTime(), branch_type: 'Sociolla'};
+  const filter_snapchat = {timestamp: timestamp.getTime(), branch_type: 'SnapChat'};
+  const filter_tiktok = {timestamp: timestamp.getTime(), branch_type: 'TikTok'};
+  const filter_lark = {timestamp: timestamp.getTime(), branch_type: 'Lark'};
+  const filter_gojek = {timestamp: timestamp.getTime(), branch_type: 'Gojek'};
+  const filter_traveloka = {timestamp: timestamp.getTime(), branch_type: 'Traveloka'};
+  const filter_bulkSMS = {timestamp: timestamp.getTime(), branch_type: 'BulkSMS'};
+  const filter_garena = {timestamp: timestamp.getTime(), branch_type: 'Garena'};
+  
 
   // const lstPhoneHieu = (await PhoneModel.find({owner: 'HIE'})).map(item => item.phone_number);
   // const lstPhoneThang = (await PhoneModel.find({owner: 'HAI'})).map(item => item.phone_number);
@@ -48,6 +56,13 @@ router.get('/otp/report', async (req, res) => {
   const count_viber = await OtpModel.count(filter_viber);
   const count_lazada = await OtpModel.count(filter_lazada);
   const count_sociolla = await OtpModel.count(filter_sociolla);
+  const count_snapchat = await OtpModel.count(filter_snapchat);
+  const count_tiktok = await OtpModel.count(filter_tiktok);
+  const count_lark = await OtpModel.count(filter_lark);
+  const count_gojek = await OtpModel.count(filter_gojek);
+  const count_traveloka = await OtpModel.count(filter_traveloka);
+  const count_bulksms = await OtpModel.count(filter_bulkSMS);
+  const count_garena = await OtpModel.count(filter_garena);
 
   
   var result = "<p id='farm2' total='" + lstOtp + "'><b>X204</b></br><b>Farm 2: "+ lstOtp +"</b>(" + current_date + "-" + timestamp.getTime() + ")</br>";
@@ -60,6 +75,13 @@ router.get('/otp/report', async (req, res) => {
   result += "Discord: " + count_discord_tha + "</br>";
   result += "Lazada: " + count_lazada + "</br>";
   result += "Sociolla: " + count_sociolla + "</br>";
+  result += "SnapChat: " + count_snapchat + "</br>";
+  result += "Tiktok: " + count_tiktok + "</br>";
+  result += "Lark: " + count_lark + "</br>";
+  result += "Gojek: " + count_gojek + "</br>";
+  result += "Traveloka: " + count_traveloka + "</br>";
+  result += "BulkSMS: " + count_bulksms + "</br>";
+  result += "Garena: " + count_garena + "</br>";
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";
   result += "Garmin: " + count_garmin + "</br>";
