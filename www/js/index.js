@@ -69,7 +69,7 @@ var intTotal5 = 0;
   }
 
   function loadFarm4() {
-    fetch('/api/farm-4/otp/report')
+    fetch('/api/farm-4/otp/report?farm=g2')
     .then(response=> response.text())
       .then(text=> {
           appendData(text, "farm-4");
@@ -89,7 +89,7 @@ var intTotal5 = 0;
   }
 
   function loadFarm5() {
-    fetch('/api/farm-5/otp/report')
+    fetch('/api/farm-5/otp/report?farm=g2')
     .then(response=> response.text())
       .then(text=> {
           appendData(text, "farm-5");
