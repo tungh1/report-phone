@@ -77,7 +77,7 @@ router.get('/otp/report', async (req, res) => {
   result += "Lark: " + count_lark + "</br>";
   result += "Gojek: " + count_gojek + "</br>";
   result += "Traveloka: " + count_traveloka + "</br>";
-  result += "BulkSMS: " + count_bulksms + "</br>";
+  result += "BulkSMS: <span id='bulkSMS_4'>" + count_bulksms + "</span></br>";
   result += "Garena: " + count_garena + "</br>";
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";

@@ -27,6 +27,7 @@ router.get('/otp/report', async (req, res) => {
   const filter_viber = {timestamp: timestamp.getTime(), branch_type: 'Viber'};
   const filter_sociolla = {timestamp: timestamp.getTime(), branch_type: 'Sociolla'};
   const filter_lazada = {timestamp: timestamp.getTime(), branch_type: 'Lazada'};
+  const filter_bulkSMS = {timestamp: timestamp.getTime(), branch_type: 'BulkSMS'};
 
 
   const lstOtp = await OtpModel.count(filter);
@@ -44,6 +45,7 @@ router.get('/otp/report', async (req, res) => {
   const count_viber = await OtpModel.count(filter_viber);
   const count_sociolla = await OtpModel.count(filter_sociolla);
   const count_lazada = await OtpModel.count(filter_lazada);
+  const count_bulksms = await OtpModel.count(filter_bulkSMS);
   
   var result = "<p><b>Z305</b></br><b id='farm3' total='" + lstOtp + "'>Farm 3: " + lstOtp + "</b></br>";
   result += "<b style='color:blue'>LinkedIn: <span id='linkedin_3'>" + count_linkedin_tha + "</span></b></br>";
@@ -53,6 +55,7 @@ router.get('/otp/report', async (req, res) => {
   result += "Line: " + count_line_tha + "</br>";
   result += "Bigo: " + count_bigo_tha + "</br>";
   result += "Discord: " + count_discord_tha + "</br>";
+  result += "BulkSMS: <span id='bulkSMS_3'>" + count_bulksms + "</span></br>";
   result += "Lazada: " + count_lazada + "</br>";
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";

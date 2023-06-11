@@ -9,7 +9,7 @@ router.get('/otp/report', async (req, res) => {
   if (!identity || identity != 'g2') { 
     res.send("");
   };
-  
+
   var current_date = new Date().toLocaleDateString();
   var timestamp = new Date(current_date);
   const filter = {timestamp: timestamp.getTime()};
@@ -28,6 +28,7 @@ router.get('/otp/report', async (req, res) => {
   const filter_sociolla = {timestamp: timestamp.getTime(), branch_type: 'Sociolla'};
   const filter_lark = {timestamp: timestamp.getTime(), branch_type: 'Lark'};
   const filter_lazada = {timestamp: timestamp.getTime(), branch_type: 'Lazada'};
+  const filter_bulkSMS = {timestamp: timestamp.getTime(), branch_type: 'BulkSMS'};
   
 
   const lstOtp = await OtpModel.count(filter);
@@ -46,6 +47,7 @@ router.get('/otp/report', async (req, res) => {
   const count_sociolla = await OtpModel.count(filter_sociolla);
   const count_lark = await OtpModel.count(filter_lark);
   const count_lazada = await OtpModel.count(filter_lazada);
+  const count_bulksms = await OtpModel.count(filter_bulkSMS);
   
   var result = "<b id='farm5' total='" + lstOtp + "'>Farm 5: " + lstOtp + "</b></br>";
 
@@ -56,6 +58,7 @@ router.get('/otp/report', async (req, res) => {
   result += "Line: " + count_line_tha + "</br>";
   result += "Bigo: " + count_bigo_tha + "</br>";
   result += "Discord: " + count_discord_tha + "</br>";
+  result += "BulkSMS: <span id='bulkSMS_5'>" + count_bulksms + "</span></br>";
   result += "Lazada: " + count_lazada + "</br>";
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";
