@@ -72,7 +72,7 @@ router.get('/otp/report', async (req, res) => {
   result += "<b style='color:green'>Facebook: <span id='facebook_2'>" + count_facebook_tha + "</span></b></br>";
   result += "Line: " + count_line_tha + "</br>";
   result += "Bigo: " + count_bigo_tha + "</br>";
-  result += "Discord: " + count_discord_tha + "</br>";
+  result += "Discord: <span id='discord_2'>" + count_discord_tha + "</span></br>";
   result += "Lazada: " + count_lazada + "</br>";
   result += "Sociolla: " + count_sociolla + "</br>";
   result += "SnapChat: " + count_snapchat + "</br>";
