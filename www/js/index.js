@@ -173,7 +173,8 @@ var intTotal5 = 0;
 
             var total_viber_thang = document.getElementById("viber_thang");
             var total_viber_farm_2 = document.getElementById("viber_2");
-            total_viber_thang.innerHTML = parseInt(total_viber_farm_2.innerText);
+            var total_viber_farm_4 = document.getElementById("viber_4");
+            total_viber_thang.innerHTML = parseInt(total_viber_farm_2.innerText) + parseInt(total_viber_farm_4.innerText);
 
             //var total_facebook_thang = document.getElementById("facebook_thang");
             var total_facebook_farm_3 = document.getElementById("facebook_3");
