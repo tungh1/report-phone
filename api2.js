@@ -34,6 +34,9 @@ router.get('/otp/report', async (req, res) => {
   const filter_traveloka = {timestamp: timestamp.getTime(), branch_type: 'Traveloka'};
   const filter_bulkSMS = {timestamp: timestamp.getTime(), branch_type: 'BulkSMS'};
   const filter_garena = {timestamp: timestamp.getTime(), branch_type: 'Garena'};
+  const filter_kakaotalk = {timestamp: timestamp.getTime(), branch_type: 'KakaoTalk'};
+  
+
   
 
   // const lstPhoneHieu = (await PhoneModel.find({owner: 'HIE'})).map(item => item.phone_number);
@@ -63,6 +66,7 @@ router.get('/otp/report', async (req, res) => {
   const count_traveloka = await OtpModel.count(filter_traveloka);
   const count_bulksms = await OtpModel.count(filter_bulkSMS);
   const count_garena = await OtpModel.count(filter_garena);
+  const count_kakaotalk = await OtpModel.count(filter_kakaotalk);
 
   
   var result = "<p id='farm2' total='" + lstOtp + "'><b>X204</b></br><b>Farm 2: "+ lstOtp +"</b>(" + current_date + "-" + timestamp.getTime() + ")</br>";
@@ -82,6 +86,7 @@ router.get('/otp/report', async (req, res) => {
   result += "Traveloka: " + count_traveloka + "</br>";
   result += "BulkSMS: <span id='bulkSMS_2'>" + count_bulksms + "</span></br>";
   result += "Garena: " + count_garena + "</br>";
+  result += "KakaoTalk: " + count_kakaotalk + "</br>";
   result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";
   result += "Garmin: " + count_garmin + "</br>";
