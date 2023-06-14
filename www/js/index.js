@@ -130,8 +130,9 @@ var intTotal5 = 0;
             total_apple_son.innerHTML = parseInt(total_apple_farm_3.innerText) + parseInt(total_apple_farm_5.innerText);
 
             var total_kucoin_son = document.getElementById("kucoin_son");
-            var total_kucoin_farm_3 = document.getElementById("kucoin_3");
-            total_kucoin_son.innerHTML = parseInt(total_kucoin_farm_3.innerText);
+            var total_kucoin_farm_3 = document.getElementById("lazada_3");
+            var total_kucoin_farm_5 = document.getElementById("lazada_5");
+            total_kucoin_son.innerHTML = parseInt(total_kucoin_farm_3.innerText) + parseInt(total_kucoin_farm_5.innerText);
 
             var total_linkedin_son = document.getElementById("linkedin_son");
             var total_linkedin_farm_3 = document.getElementById("discord_3");
@@ -158,8 +159,9 @@ var intTotal5 = 0;
             total_apple_thang.innerHTML = parseInt(total_apple_farm_2.innerText) + parseInt(total_apple_farm_4.innerText);
 
             var total_kucoin_thang = document.getElementById("kucoin_thang");
-            var total_kucoin_farm_2 = document.getElementById("kucoin_2");
-            total_kucoin_thang.innerHTML = parseInt(total_kucoin_farm_2.innerText);
+            var total_kucoin_farm_2 = document.getElementById("lazada_2");
+            var total_kucoin_farm_4 = document.getElementById("lazada_4");
+            total_kucoin_thang.innerHTML = parseInt(total_kucoin_farm_2.innerText) + parseInt(total_kucoin_farm_4.innerText);
 
             var total_linkedin_thang = document.getElementById("linkedin_thang");
             var total_linkedin_farm_2 = document.getElementById("discord_2");
