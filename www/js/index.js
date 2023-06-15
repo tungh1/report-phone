@@ -144,8 +144,8 @@ var intTotal5 = 0;
             var total_google_farm_5 = document.getElementById("google_5");
 
             var total_viber_son = document.getElementById("viber_son");
-            var total_viber_farm_3 = document.getElementById("bulkSMS_3");
-            var total_viber_farm_5 = document.getElementById("bulkSMS_5");
+            var total_viber_farm_3 = document.getElementById("snapchat_3");
+            var total_viber_farm_5 = document.getElementById("snapchat_5");
             total_viber_son.innerHTML = parseInt(total_viber_farm_3.innerText) + parseInt(total_viber_farm_5.innerText);
 
 
@@ -174,8 +174,8 @@ var intTotal5 = 0;
             total_google_thang.innerHTML = parseInt(total_google_farm_2.innerText) + parseInt(total_google_farm_4.innerText);
 
             var total_viber_thang = document.getElementById("viber_thang");
-            var total_viber_farm_2 = document.getElementById("bulkSMS_2");
-            var total_viber_farm_4 = document.getElementById("bulkSMS_4");
+            var total_viber_farm_2 = document.getElementById("snapchat_2");
+            var total_viber_farm_4 = document.getElementById("snapchat_4");
             total_viber_thang.innerHTML = parseInt(total_viber_farm_2.innerText) + parseInt(total_viber_farm_4.innerText);
 
             //var total_facebook_thang = document.getElementById("facebook_thang");
