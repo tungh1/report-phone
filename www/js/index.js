@@ -124,9 +124,8 @@ var intTotal5 = 0;
             //Son
             var total_apple_son = document.getElementById("apple_son");
             //var total_apple_farm_0 = document.getElementById("apple_0");
-            var total_apple_farm_3 = document.getElementById("apple_3");
-            var total_apple_farm_5 = document.getElementById("apple_5");
-            var total_apple_farm_4 = document.getElementById("apple_4");
+            var total_apple_farm_3 = document.getElementById("snapchat_3");
+            var total_apple_farm_5 = document.getElementById("snapchat_5");
             total_apple_son.innerHTML = parseInt(total_apple_farm_3.innerText) + parseInt(total_apple_farm_5.innerText);
 
             var total_kucoin_son = document.getElementById("kucoin_son");
@@ -155,7 +154,9 @@ var intTotal5 = 0;
 
             //Thang
             var total_apple_thang = document.getElementById("apple_thang");
-            var total_apple_farm_2 = document.getElementById("apple_2");
+            var total_apple_farm_2 = document.getElementById("snapchat_2");
+            var total_apple_farm_4 = document.getElementById("snapchat_4");
+
             total_apple_thang.innerHTML = parseInt(total_apple_farm_2.innerText) + parseInt(total_apple_farm_4.innerText);
 
             var total_kucoin_thang = document.getElementById("kucoin_thang");
