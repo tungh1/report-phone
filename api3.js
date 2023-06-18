@@ -32,6 +32,9 @@ router.get('/otp/report', async (req, res) => {
   const filter_byteplus = {timestamp: timestamp.getTime(), branch_type: 'BytePlus'};
   const filter_firebase = {timestamp: timestamp.getTime(), branch_type: 'Firebase'};
   const filter_okx = {timestamp: timestamp.getTime(), branch_type: 'OKX'};
+  const filter_yandex = {timestamp: timestamp.getTime(), branch_type: 'Yandex'};
+  const count_yandex = await OtpModel.count(filter_yandex);
+
 
 
   const lstOtp = await OtpModel.count(filter);
@@ -61,6 +64,7 @@ router.get('/otp/report', async (req, res) => {
   result += "<b style='color:green'>Google: <span id='google_3'>" + count_google_tha + "</span></b></br>";
   result += "<b style='color:green'>Facebook: <span id='facebook_3'>" + count_facebook_tha + "</span></b></br>";
   result += "Okx: <span id='okx_3'>" + count_okx + "</span></br>";
+  result += "Yandex: <span id='yandex_3'>" + count_yandex + "</span></br>";
   result += "Bigo: " + count_bigo_tha + "</br>";
   result += "Discord: <span id='discord_3'>" + count_discord_tha + "</span></br>";
   result += "BulkSMS: <span id='bulkSMS_3'>" + count_bulksms + "</span></br>";
