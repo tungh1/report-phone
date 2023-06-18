@@ -18,19 +18,14 @@ router.get('/otp/report', async (req, res) => {
   const filter_okx = {timestamp: timestamp.getTime(), branch_type: 'OKX'};
   const filter_bigo = {timestamp: timestamp.getTime(), branch_type: 'Bigo'};
   const filter_discord = {timestamp: timestamp.getTime(), branch_type: 'Discord'};
-  const filter_grab = {timestamp: timestamp.getTime(), branch_type: 'Grab'};
   const filter_agoda = {timestamp: timestamp.getTime(), branch_type: 'Agoda'};
   const filter_apple = {timestamp: timestamp.getTime(), branch_type: 'Apple'};
   const filter_kucoin = {timestamp: timestamp.getTime(), branch_type: 'KuCoin'};
   const filter_huawei = {timestamp: timestamp.getTime(), branch_type: 'Huawei'};
   const filter_garmin = {timestamp: timestamp.getTime(), branch_type: 'Garmin'};
   const filter_viber = {timestamp: timestamp.getTime(), branch_type: 'Viber'};
-  const filter_lazada = {timestamp: timestamp.getTime(), branch_type: 'Lazada'};
-  const filter_sociolla = {timestamp: timestamp.getTime(), branch_type: 'Sociolla'};
   const filter_snapchat = {timestamp: timestamp.getTime(), branch_type: 'SnapChat'};
-  const filter_tiktok = {timestamp: timestamp.getTime(), branch_type: 'TikTok'};
   const filter_lark = {timestamp: timestamp.getTime(), branch_type: 'Lark'};
-  const filter_gojek = {timestamp: timestamp.getTime(), branch_type: 'Gojek'};
   const filter_traveloka = {timestamp: timestamp.getTime(), branch_type: 'Traveloka'};
   const filter_bulkSMS = {timestamp: timestamp.getTime(), branch_type: 'BulkSMS'};
   const filter_garena = {timestamp: timestamp.getTime(), branch_type: 'Garena'};
@@ -60,7 +55,6 @@ router.get('/otp/report', async (req, res) => {
   const count_huawei = await OtpModel.count(filter_huawei);
   const count_garmin = await OtpModel.count(filter_garmin);
   const count_viber = await OtpModel.count(filter_viber);
-  const count_lazada = await OtpModel.count(filter_lazada);
   const count_snapchat = await OtpModel.count(filter_snapchat);
   const count_lark = await OtpModel.count(filter_lark);
   const count_traveloka = await OtpModel.count(filter_traveloka);
@@ -82,7 +76,6 @@ router.get('/otp/report', async (req, res) => {
   result += "Yandex: <span id='yandex_2'>" + count_yandex + "</span></br>";
   result += "Bigo: " + count_bigo_tha + "</br>";
   result += "Discord: <span id='discord_2'>" + count_discord_tha + "</span></br>";
-  result += "Lazada: <span id='lazada_2'>" + count_lazada + "</span></br>";
   result += "BytePlus: <span id='byteplus_2'>" + count_byteplus + "</span></br>";
   result += "Binance: <span id='binance_2'>" + count_binance + "</span></br>";
   result += "SnapChat: <span id='snapchat_2'>" + count_snapchat + "</span></br>";

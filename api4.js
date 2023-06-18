@@ -25,7 +25,6 @@ router.get('/otp/report', async (req, res) => {
   const filter_huawei = {timestamp: timestamp.getTime(), branch_type: 'Huawei'};
   const filter_garmin = {timestamp: timestamp.getTime(), branch_type: 'Garmin'};
   const filter_viber = {timestamp: timestamp.getTime(), branch_type: 'Viber'};
-  const filter_sociolla = {timestamp: timestamp.getTime(), branch_type: 'Sociolla'};
   const filter_snapchat = {timestamp: timestamp.getTime(), branch_type: 'SnapChat'};
   const filter_lark = {timestamp: timestamp.getTime(), branch_type: 'Lark'};
   const filter_traveloka = {timestamp: timestamp.getTime(), branch_type: 'Traveloka'};
@@ -52,7 +51,6 @@ router.get('/otp/report', async (req, res) => {
   const count_huawei = await OtpModel.count(filter_huawei);
   const count_garmin = await OtpModel.count(filter_garmin);
   const count_viber = await OtpModel.count(filter_viber);
-  const count_sociolla = await OtpModel.count(filter_sociolla);
   const count_snapchat = await OtpModel.count(filter_snapchat);
   const count_lark = await OtpModel.count(filter_lark);
   const count_traveloka = await OtpModel.count(filter_traveloka);
@@ -76,7 +74,6 @@ router.get('/otp/report', async (req, res) => {
   result += "Discord: <span id='discord_4'>" + count_discord_tha + "</span></br>";
   result += "BytePlus: <span id='byteplus_4'>" + count_byteplus + "</span></br>";
   result += "Binance: <span id='binance_4'>" + count_binance + "</span></br>";
-  result += "Sociolla: " + count_sociolla + "</br>";
   result += "SnapChat: <span id='snapchat_4'>" + count_snapchat + "</span></br>";
   result += "Firebase: <span id='firebase_4'>" + count_firebase + "</span></br>";
   result += "Lark: " + count_lark + "</br>";
