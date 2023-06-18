@@ -16,7 +16,6 @@ router.get('/otp/report', async (req, res) => {
   const filter_linkedin = {timestamp: timestamp.getTime(), branch_type: 'LinkedIn'};
   const filter_google = {timestamp: timestamp.getTime(), branch_type: 'Google'};
   const filter_facebook = {timestamp: timestamp.getTime(), branch_type: 'Facebook'};
-  const filter_line = {timestamp: timestamp.getTime(), branch_type: 'Line'};
   const filter_bigo = {timestamp: timestamp.getTime(), branch_type: 'Bigo'};
   const filter_discord = {timestamp: timestamp.getTime(), branch_type: 'Discord'};
   const filter_grab = {timestamp: timestamp.getTime(), branch_type: 'Grab'};
@@ -32,13 +31,13 @@ router.get('/otp/report', async (req, res) => {
   const filter_binance = {timestamp: timestamp.getTime(), branch_type: 'Binance'};
   const filter_byteplus = {timestamp: timestamp.getTime(), branch_type: 'BytePlus'};
   const filter_firebase = {timestamp: timestamp.getTime(), branch_type: 'Firebase'};
+  const filter_okx = {timestamp: timestamp.getTime(), branch_type: 'OKX'};
 
 
   const lstOtp = await OtpModel.count(filter);
   const count_linkedin_tha = await OtpModel.count(filter_linkedin);
   const count_google_tha = await OtpModel.count(filter_google);
   const count_facebook_tha = await OtpModel.count(filter_facebook);
-  const count_line_tha = await OtpModel.count(filter_line);
   const count_bigo_tha = await OtpModel.count(filter_bigo);
   const count_discord_tha = await OtpModel.count(filter_discord);
   const count_grab_tha = await OtpModel.count(filter_grab);
@@ -54,13 +53,14 @@ router.get('/otp/report', async (req, res) => {
   const count_binance = await OtpModel.count(filter_binance);
   const count_byteplus = await OtpModel.count(filter_byteplus);
   const count_firebase = await OtpModel.count(filter_firebase);
+  const count_okx = await OtpModel.count(filter_okx);
   
   var result = "<p><b>Z305</b></br><b id='farm3' total='" + lstOtp + "'>Farm 3: " + lstOtp + "</b></br>";
   result += "<b style='color:blue'>LinkedIn: <span id='linkedin_3'>" + count_linkedin_tha + "</span></b></br>";
   result += "<b style='color:blue'>Apple: <span id='apple_3'>" + count_apple + "</span></b></br>";
   result += "<b style='color:green'>Google: <span id='google_3'>" + count_google_tha + "</span></b></br>";
   result += "<b style='color:green'>Facebook: <span id='facebook_3'>" + count_facebook_tha + "</span></b></br>";
-  result += "Line: " + count_line_tha + "</br>";
+  result += "Okx: <span id='okx_3'>" + count_okx + "</span></br>";
   result += "Bigo: " + count_bigo_tha + "</br>";
   result += "Discord: <span id='discord_3'>" + count_discord_tha + "</span></br>";
   result += "BulkSMS: <span id='bulkSMS_3'>" + count_bulksms + "</span></br>";

@@ -124,9 +124,16 @@ var intTotal5 = 0;
             //Son
             var total_apple_son = document.getElementById("apple_son");
             //var total_apple_farm_0 = document.getElementById("apple_0");
-            var total_apple_farm_3 = document.getElementById("snapchat_3");
-            var total_apple_farm_5 = document.getElementById("snapchat_5");
+            var total_apple_farm_3 = document.getElementById("apple_3");
+            var total_apple_farm_5 = document.getElementById("apple_5");
             total_apple_son.innerHTML = parseInt(total_apple_farm_3.innerText) + parseInt(total_apple_farm_5.innerText);
+
+
+            var total_snapchat_son = document.getElementById("snapchat_son");
+            //var total_apple_farm_0 = document.getElementById("apple_0");
+            var total_snapchat_farm_3 = document.getElementById("snapchat_3");
+            var total_snapchat_farm_5 = document.getElementById("snapchat_5");
+            total_snapchat_son.innerHTML = parseInt(total_snapchat_farm_3.innerText) + parseInt(total_snapchat_farm_5.innerText);
 
             var total_kucoin_son = document.getElementById("kucoin_son");
             var total_kucoin_farm_3 = document.getElementById("viber_3");
@@ -152,17 +159,29 @@ var intTotal5 = 0;
             var total_firebase_farm_5 = document.getElementById("firebase_5");
             total_firebase_son.innerHTML = parseInt(total_firebase_farm_3.innerText) + parseInt(total_firebase_farm_5.innerText);
 
+            var total_okx_son = document.getElementById("okx_son");
+            var total_okx_farm_3 = document.getElementById("okx_3");
+            var total_okx_farm_5 = document.getElementById("okx_5");
+            total_okx_son.innerHTML = parseInt(total_okx_farm_3.innerText) + parseInt(total_okx_farm_5.innerText);
+
 
             //var total_facebook_son = document.getElementById("facebook_son");
             //total_facebook_son.innerHTML = parseInt(total_facebook_farm_0.innerText) + parseInt(total_facebook_farm_4.innerText)
 
 
             //Thang
+
             var total_apple_thang = document.getElementById("apple_thang");
-            var total_apple_farm_2 = document.getElementById("snapchat_2");
-            var total_apple_farm_4 = document.getElementById("snapchat_4");
+            var total_apple_farm_2 = document.getElementById("apple_2");
+            var total_apple_farm_4 = document.getElementById("apple_4");
 
             total_apple_thang.innerHTML = parseInt(total_apple_farm_2.innerText) + parseInt(total_apple_farm_4.innerText);
+
+            var total_snapchat_thang = document.getElementById("snapchat_thang");
+            var total_snapchat_farm_2 = document.getElementById("snapchat_2");
+            var total_snapchat_farm_4 = document.getElementById("snapchat_4");
+
+            total_snapchat_thang.innerHTML = parseInt(total_snapchat_farm_2.innerText) + parseInt(total_snapchat_farm_4.innerText);
 
             var total_kucoin_thang = document.getElementById("kucoin_thang");
             var total_kucoin_farm_2 = document.getElementById("viber_2");
@@ -188,6 +207,11 @@ var intTotal5 = 0;
             var total_firebase_farm_2 = document.getElementById("firebase_2");
             var total_firebase_farm_4 = document.getElementById("firebase_4");
             total_firebase_thang.innerHTML = parseInt(total_firebase_farm_2.innerText) + parseInt(total_firebase_farm_4.innerText);
+
+            var total_okx_thang = document.getElementById("okx_thang");
+            var total_okx_farm_2 = document.getElementById("okx_2");
+            var total_okx_farm_4 = document.getElementById("okx_4");
+            total_okx_thang.innerHTML = parseInt(total_okx_farm_2.innerText) + parseInt(total_okx_farm_4.innerText);
 
             //var total_facebook_thang = document.getElementById("facebook_thang");
             var total_facebook_farm_3 = document.getElementById("facebook_3");
