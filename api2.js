@@ -54,7 +54,6 @@ router.get('/otp/report', async (req, res) => {
   const count_okx_tha = await OtpModel.count(filter_okx);
   const count_bigo_tha = await OtpModel.count(filter_bigo);
   const count_discord_tha = await OtpModel.count(filter_discord);
-  const count_grab_tha = await OtpModel.count(filter_grab);
   const count_agoda = await OtpModel.count(filter_agoda);
   const count_apple = await OtpModel.count(filter_apple);
   const count_kucoin = await OtpModel.count(filter_kucoin);
@@ -62,11 +61,8 @@ router.get('/otp/report', async (req, res) => {
   const count_garmin = await OtpModel.count(filter_garmin);
   const count_viber = await OtpModel.count(filter_viber);
   const count_lazada = await OtpModel.count(filter_lazada);
-  const count_sociolla = await OtpModel.count(filter_sociolla);
   const count_snapchat = await OtpModel.count(filter_snapchat);
-  const count_tiktok = await OtpModel.count(filter_tiktok);
   const count_lark = await OtpModel.count(filter_lark);
-  const count_gojek = await OtpModel.count(filter_gojek);
   const count_traveloka = await OtpModel.count(filter_traveloka);
   const count_bulksms = await OtpModel.count(filter_bulkSMS);
   const count_garena = await OtpModel.count(filter_garena);
@@ -89,17 +85,13 @@ router.get('/otp/report', async (req, res) => {
   result += "Lazada: <span id='lazada_2'>" + count_lazada + "</span></br>";
   result += "BytePlus: <span id='byteplus_2'>" + count_byteplus + "</span></br>";
   result += "Binance: <span id='binance_2'>" + count_binance + "</span></br>";
-  result += "Sociolla: " + count_sociolla + "</br>";
   result += "SnapChat: <span id='snapchat_2'>" + count_snapchat + "</span></br>";
   result += "Firebase: <span id='firebase_2'>" + count_firebase + "</span></br>";
-  result += "Tiktok: " + count_tiktok + "</br>";
   result += "Lark: " + count_lark + "</br>";
-  result += "Gojek: " + count_gojek + "</br>";
   result += "Traveloka: " + count_traveloka + "</br>";
   result += "BulkSMS: <span id='bulkSMS_2'>" + count_bulksms + "</span></br>";
   result += "Garena: " + count_garena + "</br>";
   result += "KakaoTalk: " + count_kakaotalk + "</br>";
-  result += "Grab: " + count_grab_tha + "</br>";
   result += "Agoda: " + count_agoda + "</br>";
   result += "Garmin: " + count_garmin + "</br>";
   result += "Viber: <span id='viber_2'>" + count_viber + "</span></br>";
