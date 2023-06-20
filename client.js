@@ -27,13 +27,18 @@ app.use(bodyParser.json());
 
 //app.use('/', web);
 //app.use(express.static(path.join(__dirname, 'www')));
-app.use('/api/farm-2', api2);
-app.use('/api/farm-3', api3);
-app.use('/api/farm-4', api4);
-app.use('/api/farm-1', api1);
-app.use('/api/farm-0', api0);
-app.use('/api/farm-5', api5);
-app.use('/api/farm-group2', apigroup2);
-app.use('/', web);
+
+try {
+    app.use('/api/farm-2', api2);
+    app.use('/api/farm-3', api3);
+    app.use('/api/farm-4', api4);
+    app.use('/api/farm-1', api1);
+    app.use('/api/farm-0', api0);
+    app.use('/api/farm-5', api5);
+    app.use('/api/farm-group2', apigroup2);
+    app.use('/', web);
+} catch (ex) {
+    console.log(ex);
+}
+
 //assuming app is express Object.
-console.log("Test");
