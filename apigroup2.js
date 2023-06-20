@@ -51,14 +51,14 @@ router.get('/otp/report', async (req, res) => {
 
   var result = "(" + current_date + "-" + timestamp.getTime() + ")<h3>Total: "+ (total_otp_2 + total_otp_3 + total_otp_4 + total_otp_5) +"</h3>";
   
-  result += "<table><tr><td>Z305</br>"+ (total_otp_3 + total_otp_5) +"</td>";
+  result += "<table><tr><td style='color:green; font-size:20px;font-weight: bold'>Z305</br>"+ (total_otp_3 + total_otp_5) +"</td>";
   list_total_son.forEach(item => {
       result += "<td style='padding-left: 5px'><a style='color:green; font-size:20px;font-weight: bold'>"+ item[0]._id.brand_type +"</a></br>" + item.map(x => {return x.count}).reduce((a, b) => a + b, 0) + "</td>";
   });
 
   result +="</tr></table>";
 
-  result += "<table><tr><td>X204</br>"+ (total_otp_2 + total_otp_4) +"</td>";
+  result += "<table><tr><td style='color:blue; font-size:20px;font-weight: bold;'>X204</br>"+ (total_otp_2 + total_otp_4) +"</td>";
   list_total_tha.forEach(item => {
     if(item.map(x => {return x.count}).reduce((a, b) => a + b, 0) > 1000 || item[0]._id.brand_type == 'Google' || item[0]._id.brand_type == 'Discord') {
       result += "<td style='padding-left: 5px'><a style='color:blue;font-size:20px; font-weight:bold'>"+ item[0]._id.brand_type +"</a></br>" + item.map(x => {return x.count}).reduce((a, b) => a + b, 0) + "</td>";
