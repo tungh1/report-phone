@@ -34,6 +34,8 @@ router.get('/otp/report', async (req, res) => {
   const filter_byteplus = {timestamp: timestamp.getTime(), branch_type: 'BytePlus'};
   const filter_firebase = {timestamp: timestamp.getTime(), branch_type: 'Firebase'};
   const filter_yandex = {timestamp: timestamp.getTime(), branch_type: 'Yandex'};
+  const filter_authy = {timestamp: timestamp.getTime(), branch_type: 'Authy'};
+  
   
 
   
@@ -65,6 +67,7 @@ router.get('/otp/report', async (req, res) => {
   const count_byteplus = await OtpModel.count(filter_byteplus);
   const count_firebase = await OtpModel.count(filter_firebase);
   const count_yandex = await OtpModel.count(filter_yandex);
+  const count_authy = await OtpModel.count(filter_authy);
 
   
   var result = "<p id='farm2' total='" + lstOtp + "'><b>X204</b></br><b>Farm 2: "+ lstOtp +"</b>(" + current_date + "-" + timestamp.getTime() + ")</br>";

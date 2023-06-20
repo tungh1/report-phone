@@ -49,19 +49,20 @@ var intTotal5 = 0;
   }
 
   function loadFarm2() {
-    fetch('/api/farm-2/otp/report?farm=g2')
+    fetch('/api/farm-group2/otp/report?farm=g2')
     .then(response=> response.text())
       .then(text=> {
-          appendData(text, "farm-2");
-          const farm2 = document.getElementById("farm2");
-          const totalFarm2 = farm2.getAttribute("total");
-          totalOtp = totalOtp - intTotal2;
-          totalOtp += parseInt(totalFarm2);
-          intTotal2 = parseInt(totalFarm2);
-          var stotal_otp = document.getElementById("total_otp");
-          stotal_otp.innerHTML = totalOtp;  
-          loadFarm4()
-          console.log(totalOtp);
+          appendData(text, "farm-g");
+          setTimeout(intervalFunc, 5000);
+          // const farm2 = document.getElementById("farm2");
+          // const totalFarm2 = farm2.getAttribute("total");
+          // totalOtp = totalOtp - intTotal2;
+          // totalOtp += parseInt(totalFarm2);
+          // intTotal2 = parseInt(totalFarm2);
+          // var stotal_otp = document.getElementById("total_otp");
+          // stotal_otp.innerHTML = totalOtp;  
+          // loadFarm4()
+          // console.log(totalOtp);
       })
       .catch(function (err) {
           console.log(err);
@@ -246,12 +247,12 @@ var intTotal5 = 0;
 
   intervalFunc();
 
-  document.onreadystatechange = function(){
-    var stotal_otp = document.getElementById("total_otp");
-    stotal_otp.innerHTML = totalOtp;
+  // document.onreadystatechange = function(){
+  //   var stotal_otp = document.getElementById("total_otp");
+  //   stotal_otp.innerHTML = totalOtp;
 
-    if(document.readyState === 'complete'){
-        var stotal_otp = document.getElementById("total_otp");
-        stotal_otp.innerHTML = totalOtp;
-    }
-  }
+  //   if(document.readyState === 'complete'){
+  //       var stotal_otp = document.getElementById("total_otp");
+  //       stotal_otp.innerHTML = totalOtp;
+  //   }
+  // }
