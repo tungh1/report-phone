@@ -53,14 +53,18 @@ router.get('/otp/report', async (req, res) => {
   
   result += "<table><tr><td>Z305</td>";
   list_total_son.forEach(item => {
-    result += "<td style='padding-left: 5px'><a style='color:green; font-size:20px;font-weight: bold'>"+ item[0]._id.brand_type +"</a></br>" + item.map(x => {return x.count}).reduce((a, b) => a + b, 0) + "</td>";
+    if(item.map(x => {return x.count}).reduce((a, b) => a + b, 0) > 1000) {
+      result += "<td style='padding-left: 5px'><a style='color:green; font-size:20px;font-weight: bold'>"+ item[0]._id.brand_type +"</a></br>" + item.map(x => {return x.count}).reduce((a, b) => a + b, 0) + "</td>";
+    }
   });
 
   result +="</tr></table>";
 
   result += "<table><tr><td>X204</td>";
   list_total_tha.forEach(item => {
-    result += "<td style='padding-left: 5px'><a style='color:blue;font-size:20px; font-weight:bold'>"+ item[0]._id.brand_type +"</a></br>" + item.map(x => {return x.count}).reduce((a, b) => a + b, 0) + "</td>";
+    if(item.map(x => {return x.count}).reduce((a, b) => a + b, 0) > 1000) {
+      result += "<td style='padding-left: 5px'><a style='color:blue;font-size:20px; font-weight:bold'>"+ item[0]._id.brand_type +"</a></br>" + item.map(x => {return x.count}).reduce((a, b) => a + b, 0) + "</td>";
+    }
   });
 
   result +="</tr></table>";
