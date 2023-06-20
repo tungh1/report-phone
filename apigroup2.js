@@ -30,7 +30,7 @@ router.get('/otp/report', async (req, res) => {
 
   var current_date = new Date().toLocaleDateString();
   var timestamp = new Date(current_date);
-  const filter_group = [{ $match: { timestamp: timestamp.getTime() }}, { $group: { _id: { brand_type: '$branch_type' }, count: {$sum: 1} } }, {$sort: { branch_type: 1, _id: 1}}];
+  const filter_group = [{ $match: { timestamp: timestamp.getTime() }}, { $group: { _id: { brand_type: '$branch_type' }, count: {$sum: 1} } }, {$sort: { count: -1, _id: 1}}];
   const list_filter_2 = await OtpModel2.aggregate(filter_group);
   const list_filter_4 = await OtpModel4.aggregate(filter_group);
 
