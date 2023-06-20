@@ -92,7 +92,7 @@ router.get('/otp/report', async (req, res) => {
       result += "<span style='margin-right: 10px;'><b style='color:green'>"+ item._id.brand_type +"</b>: " + item.count + "</span>";
     });
   } catch (ex) {
-      result = ex;
+      result = JSON.stringify(ex);
   }
 
   res.send(result);
