@@ -2,7 +2,7 @@
     fetch('/api/farm-group2/otp/report?farm=g2')
     .then(response=> response.text())
       .then(text=> {
-          fill_data(text, "farm-g");
+          fill_data(text);
           setTimeout(reload, 5000);
       })
       .catch(function (err) {
@@ -14,8 +14,8 @@
     start();
   }
 
-  function fill_data(data, strDiv) {
-    var mainContainer = document.getElementById(strDiv);
+  function fill_data(data) {
+    var mainContainer = document.getElementById('g-location');
     mainContainer.innerHTML = data;
   }
 
