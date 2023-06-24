@@ -22,7 +22,7 @@ function groupBy(list, keyGetter) {
   return map;
 }
 
-router.get('/otp/report', async (req, res) => {
+router.get('/report', async (req, res) => {
   const identity = req.query.farm;
   if (!identity || identity != 'g2') { 
     res.send("");

@@ -1,5 +1,5 @@
   function start() {
-    fetch('/api/farm-group2/otp/report?farm=g2')
+    fetch('/api/report?farm=g2')
     .then(response=> response.text())
       .then(text=> {
           fill_data(text);

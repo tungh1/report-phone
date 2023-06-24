@@ -35,7 +35,7 @@ try {
     app.use('/api/farm-1', api1);
     app.use('/api/farm-0', api0);
     app.use('/api/farm-5', api5);
-    app.use('/api/farm-group2', apigroup2);
+    app.use('/api', apigroup2);
     app.use('/', web);
 } catch (ex) {
     console.log(ex);
