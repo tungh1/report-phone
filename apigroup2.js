@@ -61,7 +61,7 @@ router.get('/report', async (req, res) => {
     const list_total_tha = groupBy(list_group_tha, x => x._id.brand_type);
     const list_total_son = groupBy(list_group_son, x => x._id.brand_type);
 
-    result = current_date + " <span style='font-size:8px;'>" + timestamp.getTime() + "</span><h3>Total: "+ (total_otp_2 + total_otp_3 + total_otp_4 + total_otp_5) +"</h3>";
+    result = current_date + " <span style='font-size:8px;'>" + timestamp.getTime() + "</span><h3>Total: "+ (total_otp_2 + total_otp_3 + total_otp_4 + total_otp_5 + total_otp_9) +"</h3>";
     
     result += "<table><tr><td style='color:green; font-size:20px;font-weight: bold'>Z305</br><a style='color:red'>"+ (total_otp_3 + total_otp_5) +"</a></td>";
     list_total_son.forEach(item => {
