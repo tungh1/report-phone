@@ -3,7 +3,6 @@ const bodyParser=require('body-parser');
 const api1 = require('./api1');
 const api0 = require('./api0');
 const api2 = require('./api2');
-const api2_demo = require('./api2-demo');
 const apigroup2 = require('./apigroup2');
 const api3 = require('./api3');
 const api4 = require('./api4');
@@ -31,7 +30,6 @@ app.use(bodyParser.json());
 
 try {
     app.use('/api/farm-2', api2);
-    app.use('/api/farm-demo', api2_demo);
     app.use('/api/farm-3', api3);
     app.use('/api/farm-4', api4);
     app.use('/api/farm-1', api1);
