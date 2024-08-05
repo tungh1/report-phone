@@ -33,7 +33,7 @@ function sortByKey(array, key) {
 
 router.get('/report', async (req, res) => {
   const identity = req.query.farm;
-  if (!identity || identity != 'g2') { 
+  if (!identity || identity != 'g3') { 
     res.send("");
   };
 
@@ -45,6 +45,7 @@ router.get('/report', async (req, res) => {
     const list_filter_2 = await OtpModel2.aggregate(filter_group);
     const list_filter_4 = await OtpModel4.aggregate(filter_group);
     const list_filter_9 = await OtpModel9.aggregate(filter_group);
+    const list_filter_11 = await OtpModel11.aggregate(filter_group);
 
     const list_filter_3 = await OtpModel3.aggregate(filter_group);
     const list_filter_5 = await OtpModel5.aggregate(filter_group);
@@ -52,6 +53,7 @@ router.get('/report', async (req, res) => {
     const total_otp_2 = list_filter_2.map(x => { return x.count }).reduce((a, b) => a + b, 0);
     const total_otp_4 = list_filter_4.map(x => { return x.count }).reduce((a, b) => a + b, 0);
     const total_otp_9 = list_filter_9.map(x => { return x.count }).reduce((a, b) => a + b, 0);
+    const total_otp_11 = list_filter_11.map(x => { return x.count }).reduce((a, b) => a + b, 0);
 
     const total_otp_3 = list_filter_3.map(x => { return x.count }).reduce((a, b) => a + b, 0);
     const total_otp_5 = list_filter_5.map(x => { return x.count }).reduce((a, b) => a + b, 0);
@@ -62,7 +64,7 @@ router.get('/report', async (req, res) => {
     const list_total_tha = groupBy(list_group_tha, x => x._id.brand_type);
     const list_total_son = groupBy(list_group_son, x => x._id.brand_type);
 
-    result = current_date + " <span style='font-size:8px;'>" + timestamp.getTime() + "</span><h3>Total: "+ (total_otp_2 + total_otp_3 + total_otp_4 + total_otp_5 + total_otp_9) +"</h3>";
+    result = current_date + " <span style='font-size:8px;'>" + timestamp.getTime() + "</span><h3>Total: "+ (total_otp_2 + total_otp_3 + total_otp_4 + total_otp_5 + total_otp_9 + total_otp_11) +"</h3>";
     
     result += "<table><tr><td style='color:green; font-size:20px;font-weight: bold'>Z305</br><a style='color:red'>"+ (total_otp_3 + total_otp_5) +"</a></td>";
     list_total_son.forEach(item => {
@@ -94,6 +96,12 @@ router.get('/report', async (req, res) => {
     result += "</br></br><b style='color:blue'>Farm 9: "+ total_otp_9 +"</b></br>";
 
     list_filter_9.forEach(item => {
+      result += "<span style='margin-right: 10px;'><b style='color:blue'>"+ item._id.brand_type +"</b>: " + item.count + "</span>";
+    });
+
+    result += "</br></br><b style='color:blue'>Farm 11: "+ total_otp_11 +"</b></br>";
+
+    list_filter_11.forEach(item => {
       result += "<span style='margin-right: 10px;'><b style='color:blue'>"+ item._id.brand_type +"</b>: " + item.count + "</span>";
     });
 
