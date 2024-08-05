@@ -4,6 +4,7 @@ const api1 = require('./api1');
 const api0 = require('./api0');
 const api2 = require('./api2');
 const apigroup2 = require('./apigroup2');
+const apigroup3 = require('./apigroup3');
 const api3 = require('./api3');
 const api4 = require('./api4');
 const api5 = require('./api5');
