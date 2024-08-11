@@ -1,0 +1,1 @@
+function start(){fetch("/api/1011/report?farm=g3").then((t=>t.text())).then((t=>{fill_data(t),setTimeout(reload,5e3)})).catch((function(t){console.log(t)}))}function reload(){start()}function fill_data(t){document.getElementById("g-location").innerHTML=t}reload();
