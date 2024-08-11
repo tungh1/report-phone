@@ -24,7 +24,7 @@ router.get('/',function(req,res){
 
 router.get('/1011',function(req,res){
     const identity = req.query.farm;
-    if (identity && identity == 'g2') {
+    if (identity && identity == 'g3') {
         res.sendFile(path.join(__dirname+'/www/index1011.html'));
         //__dirname : It will resolve to your project folder.
     } else {
