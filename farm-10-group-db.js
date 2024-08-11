@@ -9,10 +9,10 @@ const options = {
     family: 4 // Use IPv4, skip trying IPv6
   };
 
-const conn = mongoose.createConnection('mongodb+srv://tunghoang:Abc1234@mandiver-cluster.wrsn1wf.mongodb.net/farm-11');
-const OtpModel11 = conn.model('otp', Otpschema, 'otps');
+const conn = mongoose.createConnection('mongodb+srv://tunghoang:Abc1234@mandiver-cluster.wrsn1wf.mongodb.net/farm-10');
+const OtpModel10 = conn.model('otp', Otpschema, 'otps');
 
 
 module.exports = {
-    OtpModel11
+    OtpModel10
 };
